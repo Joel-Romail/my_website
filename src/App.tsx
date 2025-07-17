@@ -3,14 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, Menu, X, Code, Palette, Zap } from 'lucide-react';
 
-const myVariants: Variants = {
+const myVariant = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: { type: 'spring', stiffness: 100 },
   },
-};
+} as any;
+
 
 
 const Portfolio: React.FC = () => {
