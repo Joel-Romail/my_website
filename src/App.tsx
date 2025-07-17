@@ -1,6 +1,17 @@
+import type { Variants } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, Menu, X, Code, Palette, Zap } from 'lucide-react';
+
+const myVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring', stiffness: 100 },
+  },
+};
+
 
 const Portfolio: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -313,9 +324,9 @@ const Portfolio: React.FC = () => {
                   {skill.name}
                 </h3>
                 <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {skill.name === 'Frontend' && 'React, TypeScript, Next.js, Vue.js'}
-                  {skill.name === 'UI/UX' && 'Figma, Adobe XD, Responsive Design'}
-                  {skill.name === 'Performance' && 'Optimization, SEO, Web Vitals'}
+                  {skill.name === 'Frontend' && 'React, TypeScript, Next.js,'}
+                  {skill.name === 'UI/UX' && 'Figma, Responsive Design'}
+                  {skill.name === 'Performance' && ' Web Vitals'}
                 </p>
               </motion.div>
             ))}
